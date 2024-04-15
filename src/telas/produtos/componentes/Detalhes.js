@@ -6,7 +6,7 @@ import Botao from "../../../componentes/Botao"
 
 //import uma fonte diferente do Google Fonts
 //npm expo install expo-font @expo-google-fonts/nome-da-fonte
-export default function Detalhes({ logo, nome, detalhe, preco }) {
+export default function Detalhes({ logo, nome, detalhe, preco, botao }) {
     return <View style={styles.produto}>
         <View style={styles.logotipo}>
             <Image source={logo} style={styles.logo} resizeMode='contain'></Image>
@@ -14,7 +14,7 @@ export default function Detalhes({ logo, nome, detalhe, preco }) {
         </View>
         <Texto style={styles.descricao}> {detalhe} </Texto>
         <Texto style={styles.preco}>{preco}</Texto>
-        <Botao></Botao>
+        <Botao textoBotao={botao} clickBotao={()=>{Alert.alert("Em breve!","Estamos preparando uma nova função para você")}}/>
     </View>
 }
 

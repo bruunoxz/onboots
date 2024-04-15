@@ -1,7 +1,8 @@
-import Produto from './src/telas/Produto'
 import { View } from 'react-native'
 import {useFonts, RobotoCondensed_300Light, RobotoCondensed_700Bold} from '@expo-google-fonts/roboto-condensed'
 
+import Produto from './src/telas/produtos/index'
+import Mocks from './src/mocks/produto'
 
 export default function App() {
   //Carrega a fonte
@@ -13,5 +14,5 @@ export default function App() {
   if(!fonteCarregada){
     return <View/>
   }
-  return <Produto/>;
+  return <Produto{...Mocks} fonteBold="RobotoCBold" />;
 }

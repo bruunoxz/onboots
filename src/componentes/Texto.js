@@ -17,5 +17,6 @@ const styles = StyleSheet.create({
     },
     textoNegrito: {
         fontFamily: "RobotoCBold",
+        fontWeight: "normal"
     }
 })
