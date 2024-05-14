@@ -5,9 +5,10 @@ export default function Texto({children, style}){
    //Define a estilização padrão do campo 
     let estilo = styles.texto;
     //Verifica se deve exibir a fonte em negrito
-    if(style.fontWeight=="bold"){
+
+    if (style && style.fontWeight && style.fontWeight === "bold") {
         estilo = styles.textoNegrito;
-    }
+      }
     return <Text style={[style, estilo]}>{children}</Text>
 }
 
